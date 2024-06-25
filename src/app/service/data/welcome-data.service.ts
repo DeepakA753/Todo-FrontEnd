@@ -28,7 +28,7 @@ export class WelcomeDataService {
     //   })
 
     return this.http.get<HelloWorldBean>(
-      `http://localhost:8080/hello-world/path-variable/${name}`,
+      `https://deepaka753.github.io/Todo-BackEnd/hello-world/path-variable/${name}`,
       //{headers}
     );
     //console.log("Execute Hello World Bean Service")
