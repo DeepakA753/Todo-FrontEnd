@@ -13,5 +13,5 @@ import { MenuComponent } from './menu/menu.component';
 })
 export class AppComponent {
   title = 'todo';
-  message = 'Welcome to in28Minutes';
+  message = 'Welcome to Todo App';
 }

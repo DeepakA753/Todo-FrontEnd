@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
   handleLogin() {
     // console.log(this.username);
-    //if(this.username==="in28minutes" && this.password === 'dummy') {
+    //if(this.username==="Deepak" && this.password === 'Deepak') {
     if(this.hardcodedAuthenticationService.authenticate(this.username, this.password)) {
       //Redirect to Welcome Page
       this.router.navigate(['welcome', this.username])
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
 
   handleBasicAuthLogin() {
     // console.log(this.username);
-    //if(this.username==="in28minutes" && this.password === 'dummy') {
+    //if(this.username==="Deepak" && this.password === 'Deepak') {
     this.basicAuthenticationService.executeAuthenticationService(this.username, this.password)
         .subscribe(
           data => {

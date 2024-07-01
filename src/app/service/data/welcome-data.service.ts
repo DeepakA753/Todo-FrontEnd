@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { API_URL } from 'src/app/app.constants';
 
 export class HelloWorldBean {
   constructor(public message: string) { }
@@ -15,10 +16,10 @@ export class WelcomeDataService {
   ) { }
 
   executeHelloWorldBeanService() {
-    return this.http.get<HelloWorldBean>('http://localhost:8080/hello-world-bean');
+    return this.http.get<HelloWorldBean>(`${API_URL}/hello-world-bean`);
     //console.log("Execute Hello World Bean Service")
   }
-  //http://localhost:8080/hello-world/path-variable/in28minutes
+  //http://localhost:8080/hello-world/path-variable/Deepak
 
   executeHelloWorldServiceWithPathVariable(name: string) {
     // let basicAuthHeaderString = this.createBasicAuthenticationHttpHeader();
@@ -28,25 +29,16 @@ export class WelcomeDataService {
     //   })
 
     return this.http.get<HelloWorldBean>(
-      `https://deepaka753.github.io/Todo-BackEnd/hello-world/path-variable/${name}`,
+      `${API_URL}/hello-world/path-variable/${name}`,
       //{headers}
     );
     //console.log("Execute Hello World Bean Service")
   }
 
   // createBasicAuthenticationHttpHeader() {
-  //   let username = 'in28minutes'
-  //   let password = 'dummy'
+  //   let username = 'Deepak'
+  //   let password = 'Deepak'
   //   let basicAuthHeaderString = 'Basic ' + window.btoa(username + ':' + password);
   //   return basicAuthHeaderString;
   // }
-  //Access to XMLHttpRequest at 
-  //'http://localhost:8080/hello-world/path-variable/in28minutes' 
-  //from origin 'http://localhost:4200' has been blocked by CORS policy: 
-  //No 'Access-Control-Allow-Origin' header is present on the requested resource.
-
-  //Access to XMLHttpRequest at 'http://localhost:8080/hello-world/path-variable/in28minutes' from origin 'http://localhost:4200' 
-  //has been blocked by CORS policy: 
-  //Response to preflight request doesn't pass 
-  //access control check: It does not have HTTP ok status
 }

@@ -9,7 +9,7 @@ export class HardcodedAuthenticationService {
 
   authenticate(username: string, password: string) {
     //console.log('before ' + this.isUserLoggedIn());
-    if (username === "in28minutes" && password === 'dummy') {
+    if (username === "Deepak" && password === 'Deepak') {
       sessionStorage.setItem('authenticaterUser', username);
       //console.log('after ' + this.isUserLoggedIn());
       return true;

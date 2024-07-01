@@ -16,7 +16,7 @@ export class BasicAuthenticationService {
   executeJWTAuthenticationService(username: string, password: string) {
 
     return this.http.post<any>(
-      `https://deepaka753.github.io/Todo-BackEnd/authenticate`, {
+      `${API_URL}/authenticate`, {
       username,
       password
     }).pipe(
